@@ -16,5 +16,33 @@ namespace Caixa_Eletronico
         {
             InitializeComponent();
         }
+        private void btSacar_Click(object sender, EventArgs e)
+        {
+            double valor, saldo = 0;
+            valor = (double)numOper_valor.Value;
+
+            saldo -= valor;
+        }
+
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+            double valor;
+           
+        }
+
+        private void btDepositar_Click(object sender, EventArgs e)
+        {
+            double valor, saldo = 0;
+            valor =(double)numOper_valor.Value;
+
+            saldo += valor;
+            
+            lblSaldo.Text = saldo.ToString("c");
+        }
+
+        private void lblSaldo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

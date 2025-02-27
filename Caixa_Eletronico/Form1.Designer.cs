@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.lblValor = new System.Windows.Forms.Label();
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.btDepositar = new System.Windows.Forms.Button();
             this.btSacar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblSaldo = new System.Windows.Forms.Label();
-            this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.numOper_valor = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numOper_valor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblValor
@@ -48,15 +50,6 @@
             this.lblValor.TabIndex = 0;
             this.lblValor.Text = "Valor:";
             // 
-            // domainUpDown1
-            // 
-            this.domainUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.domainUpDown1.Location = new System.Drawing.Point(117, 53);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(207, 26);
-            this.domainUpDown1.TabIndex = 1;
-            this.domainUpDown1.Text = "domainUpDown1";
-            // 
             // btDepositar
             // 
             this.btDepositar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,6 +59,7 @@
             this.btDepositar.TabIndex = 2;
             this.btDepositar.Text = "Depositar";
             this.btDepositar.UseVisualStyleBackColor = true;
+            this.btDepositar.Click += new System.EventHandler(this.btDepositar_Click);
             // 
             // btSacar
             // 
@@ -76,6 +70,7 @@
             this.btSacar.TabIndex = 3;
             this.btSacar.Text = "Sacar";
             this.btSacar.UseVisualStyleBackColor = true;
+            this.btSacar.Click += new System.EventHandler(this.btSacar_Click);
             // 
             // label1
             // 
@@ -96,15 +91,7 @@
             this.lblSaldo.Size = new System.Drawing.Size(94, 29);
             this.lblSaldo.TabIndex = 5;
             this.lblSaldo.Text = "R$ 0.00";
-            // 
-            // domainUpDown2
-            // 
-            this.domainUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.domainUpDown2.Location = new System.Drawing.Point(125, 263);
-            this.domainUpDown2.Name = "domainUpDown2";
-            this.domainUpDown2.Size = new System.Drawing.Size(207, 26);
-            this.domainUpDown2.TabIndex = 6;
-            this.domainUpDown2.Text = "domainUpDown2";
+            this.lblSaldo.Click += new System.EventHandler(this.lblSaldo_Click);
             // 
             // label2
             // 
@@ -116,21 +103,37 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Limite:";
             // 
+            // numOper_valor
+            // 
+            this.numOper_valor.Location = new System.Drawing.Point(117, 56);
+            this.numOper_valor.Name = "numOper_valor";
+            this.numOper_valor.Size = new System.Drawing.Size(191, 20);
+            this.numOper_valor.TabIndex = 8;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(125, 266);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(191, 20);
+            this.numericUpDown2.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 340);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numOper_valor);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.domainUpDown2);
             this.Controls.Add(this.lblSaldo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btSacar);
             this.Controls.Add(this.btDepositar);
-            this.Controls.Add(this.domainUpDown1);
             this.Controls.Add(this.lblValor);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.numOper_valor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,13 +142,13 @@
         #endregion
 
         private System.Windows.Forms.Label lblValor;
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.Button btDepositar;
         private System.Windows.Forms.Button btSacar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSaldo;
-        private System.Windows.Forms.DomainUpDown domainUpDown2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown numOper_valor;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
     }
 }
 
