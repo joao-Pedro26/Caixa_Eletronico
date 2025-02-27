@@ -12,16 +12,20 @@ namespace Caixa_Eletronico
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
         }
+        double saldo = 0;
         private void btSacar_Click(object sender, EventArgs e)
         {
-            double valor, saldo = 0;
+            double valor;
             valor = (double)numOper_valor.Value;
-
+            btSacar.Enabled =
+                !((double)numOper_limite.Value > valor);
             saldo -= valor;
+            lblSaldo.Text = saldo.ToString("c");
         }
 
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
@@ -32,7 +36,7 @@ namespace Caixa_Eletronico
 
         private void btDepositar_Click(object sender, EventArgs e)
         {
-            double valor, saldo = 0;
+            double valor;
             valor =(double)numOper_valor.Value;
 
             saldo += valor;

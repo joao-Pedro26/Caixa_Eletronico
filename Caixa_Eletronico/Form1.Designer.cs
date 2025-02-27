@@ -35,9 +35,9 @@
             this.lblSaldo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numOper_valor = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numOper_limite = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numOper_valor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOper_limite)).BeginInit();
             this.SuspendLayout();
             // 
             // lblValor
@@ -110,19 +110,19 @@
             this.numOper_valor.Size = new System.Drawing.Size(191, 20);
             this.numOper_valor.TabIndex = 8;
             // 
-            // numericUpDown2
+            // numOper_limite
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(125, 266);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(191, 20);
-            this.numericUpDown2.TabIndex = 9;
+            this.numOper_limite.Location = new System.Drawing.Point(125, 266);
+            this.numOper_limite.Name = "numOper_limite";
+            this.numOper_limite.Size = new System.Drawing.Size(191, 20);
+            this.numOper_limite.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 340);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numOper_limite);
             this.Controls.Add(this.numOper_valor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblSaldo);
@@ -133,7 +133,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numOper_valor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOper_limite)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,7 +148,7 @@
         private System.Windows.Forms.Label lblSaldo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numOper_valor;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numOper_limite;
     }
 }
 
