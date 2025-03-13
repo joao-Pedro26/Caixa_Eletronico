@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblValor = new System.Windows.Forms.Label();
             this.btDepositar = new System.Windows.Forms.Button();
             this.btSacar = new System.Windows.Forms.Button();
@@ -36,6 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.numOper_valor = new System.Windows.Forms.NumericUpDown();
             this.numOper_limite = new System.Windows.Forms.NumericUpDown();
+            this.tmrJuros = new System.Windows.Forms.Timer(this.components);
+            this.lblTaxa = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numOper_valor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOper_limite)).BeginInit();
             this.SuspendLayout();
@@ -106,9 +109,15 @@
             // numOper_valor
             // 
             this.numOper_valor.Location = new System.Drawing.Point(117, 56);
+            this.numOper_valor.Maximum = new decimal(new int[] {
+            -1486618624,
+            232830643,
+            0,
+            0});
             this.numOper_valor.Name = "numOper_valor";
             this.numOper_valor.Size = new System.Drawing.Size(191, 20);
             this.numOper_valor.TabIndex = 8;
+            this.numOper_valor.Tag = "";
             // 
             // numOper_limite
             // 
@@ -117,11 +126,28 @@
             this.numOper_limite.Size = new System.Drawing.Size(191, 20);
             this.numOper_limite.TabIndex = 9;
             // 
+            // tmrJuros
+            // 
+            this.tmrJuros.Enabled = true;
+            this.tmrJuros.Interval = 5000;
+            this.tmrJuros.Tick += new System.EventHandler(this.tmrJuros_Tick);
+            // 
+            // lblTaxa
+            // 
+            this.lblTaxa.AutoSize = true;
+            this.lblTaxa.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaxa.Location = new System.Drawing.Point(30, 330);
+            this.lblTaxa.Name = "lblTaxa";
+            this.lblTaxa.Size = new System.Drawing.Size(38, 13);
+            this.lblTaxa.TabIndex = 10;
+            this.lblTaxa.Text = "label3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 340);
+            this.ClientSize = new System.Drawing.Size(389, 369);
+            this.Controls.Add(this.lblTaxa);
             this.Controls.Add(this.numOper_limite);
             this.Controls.Add(this.numOper_valor);
             this.Controls.Add(this.label2);
@@ -131,7 +157,10 @@
             this.Controls.Add(this.btDepositar);
             this.Controls.Add(this.lblValor);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Caixa Eletrônico";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numOper_valor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOper_limite)).EndInit();
             this.ResumeLayout(false);
@@ -149,6 +178,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numOper_valor;
         private System.Windows.Forms.NumericUpDown numOper_limite;
+        private System.Windows.Forms.Timer tmrJuros;
+        private System.Windows.Forms.Label lblTaxa;
     }
 }
 
